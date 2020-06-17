@@ -1,0 +1,22 @@
+.section {
+  padding: 3.5rem 0;
+
+  &--bg-image-2 {
+    @include background-image ("../images/home-image-3.png", $color-primario);
+  }
+
+  &--bg-image-3 {
+    @include background-image ("../images/about-image-2.png", $color-primario);
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-align: center;
+
+    &--white {
+      color: $blanco;
+    }
+  }
+}

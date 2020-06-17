@@ -1,0 +1,28 @@
+.section_mision {
+  &__title {
+    color: $blanco;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    @media (min-width: 520px) {
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    color: $blanco;
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+
+  &__item {
+    &:nth-child(3) {
+      margin-top: 5rem;
+
+      @media (min-width: 1024px) {
+        margin: 0;
+      }
+    }
+  }
+}

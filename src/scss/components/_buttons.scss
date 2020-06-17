@@ -1,0 +1,144 @@
+.button_theme {
+  @include button-theme();
+
+  &:hover {
+    background: #128c07 !important;
+  }
+}
+
+.button_donate {
+  width: 50%;
+  max-width: 150px;
+  background: $blanco;
+  color: $color-primario;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  margin: auto;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 13px 11px -2px rgba(0, 0, 0, 0.16);
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-primario;
+    background: #eaeaea;
+  }
+
+  .fa-paypal {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+}
+
+.d-flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu_button {
+  width: 50px;
+  height: 100%;
+  padding: 5px;
+  position: relative;
+
+  .burger {
+    display: block;
+    width: 100%;
+    max-width: 30px;
+    height: 2px;
+    background: $blanco;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0, -50%);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $blanco;
+    }
+
+    &::before {
+      top: 9px;
+      left: 0;
+    }
+
+    &::after {
+      bottom: 9px;
+      left: 0;
+    }
+
+    &.active {
+      background: none;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transition: all 0.3s;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &--light {
+    .burger {
+      background: $color-primario;
+
+      &::before,
+      &::after {
+        background: $color-primario;
+      }
+    }
+  }
+}
+
+.button_menu {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline: none !important;
+  text-align: right;
+
+  &__icon {
+    font-size: 2rem;
+    color: $blanco;
+  }
+
+  &--light {
+    .button_menu__icon {
+      color: $color-primario;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .button_donate {
+    background: $color-primario;
+    color: $blanco;
+    font-weight: 400;
+    margin-left: 3rem;
+
+    &:hover {
+      color: $blanco;
+      background: #128c07;
+    }
+
+    .fab {
+      color: $blanco;
+      font-size: 1.2rem;
+    }
+  }
+}

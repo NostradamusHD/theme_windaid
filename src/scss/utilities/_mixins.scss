@@ -1,0 +1,39 @@
+@mixin flex-align-content($x: null, $y: null) {
+  display: flex;
+
+  @if ($x != null) {
+    justify-content: $x;
+  }
+
+  @if ($y != null) {
+    align-items: $y;
+  }
+
+  @content;
+}
+
+@mixin image-cover() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin background-image($url, $background-color) {
+  background: linear-gradient(rgba($color: $background-color, $alpha: 0.85), rgba($color: $background-color, $alpha: 0.85)), url($url);
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin full-size() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin button-theme() {
+  background: #18a50b !important;
+  border-radius: 50px !important;
+  color: $blanco !important;
+  padding: 0.8em 3.5rem !important;
+  font-size: 1rem;
+}

@@ -1,0 +1,25 @@
+.section_together {
+  text-align: center;
+
+  &__item {
+    margin-bottom: 3rem;
+    color: $blanco;
+
+    .h1 {
+      margin-bottom: 2.3rem;
+    }
+
+    .text {
+      color: $blanco;
+      font-size: 1rem;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+}
